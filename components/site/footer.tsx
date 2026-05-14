@@ -6,17 +6,17 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 import { ArrowUp } from "lucide-react"
 
 const socials = [
-  { href: "https://github.com/Ch-SaifUllah-Sundhu",                icon: FaGithub,    label: "GitHub",    hover: "hover:text-white" },
-  { href: "https://www.linkedin.com/in/saifullah-sundhu-708363357", icon: FaLinkedin,  label: "LinkedIn",  hover: "hover:text-blue-400" },
-  { href: "https://www.instagram.com/saif_sundhu",                 icon: FaInstagram, label: "Instagram", hover: "hover:text-pink-400" },
+  { href: "https://github.com/Ch-SaifUllah-Sundhu", icon: FaGithub, label: "GitHub", hover: "hover:text-white" },
+  { href: "https://www.linkedin.com/in/saifullah-sundhu-708363357", icon: FaLinkedin, label: "LinkedIn", hover: "hover:text-blue-400" },
+  { href: "https://www.instagram.com/saif_sundhu", icon: FaInstagram, label: "Instagram", hover: "hover:text-pink-400" },
 ]
 
 const navLinks = [
-  { href: "#hero",       label: "Home" },
-  { href: "#about",      label: "About" },
-  { href: "#projects",   label: "Projects" },
+  { href: "#hero", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#contact",    label: "Contact" },
+  { href: "#contact", label: "Contact" },
 ]
 
 export function Footer() {
@@ -42,8 +42,8 @@ export function Footer() {
             <Link href="#hero" className="flex items-center gap-3 mb-3 group w-fit">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-violet-600 via-purple-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform" />
               <span className="font-bold text-lg">
-                <span className="text-foreground">Ch.</span>
-                <span className="gradient-text">Saifullah</span>
+                <span className="text-foreground">Ch </span>
+                <span className="gradient-text">Saifullah Sundhu</span>
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">

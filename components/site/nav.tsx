@@ -7,20 +7,20 @@ import { Menu, X, Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
 const navLinks = [
-  { href: "#hero",       label: "Home" },
-  { href: "#about",      label: "About" },
-  { href: "#projects",   label: "Projects" },
+  { href: "#hero", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#contact",    label: "Contact" },
+  { href: "#contact", label: "Contact" },
 ]
 
 export function Nav() {
-  const [scrolled, setScrolled]       = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const [scrollProgress, setProgress] = useState(0)
-  const [mobileOpen, setMobileOpen]   = useState(false)
-  const [activeSection, setActive]    = useState("hero")
-  const { theme, setTheme }           = useTheme()
-  const [mounted, setMounted]         = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [activeSection, setActive] = useState("hero")
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => { setMounted(true) }, [])
 
@@ -52,11 +52,10 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "backdrop-blur-xl bg-background/80 border-b border-border/40 shadow-lg shadow-black/20"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? "backdrop-blur-xl bg-background/80 border-b border-border/40 shadow-lg shadow-black/20"
+        : "bg-transparent"
+        }`}
     >
       {/* Scroll progress bar */}
       <div
@@ -72,25 +71,24 @@ export function Nav() {
         <Link href="#hero" className="flex items-center gap-3 group">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-violet-600 via-purple-500 to-cyan-400 shadow-md shadow-violet-500/30 group-hover:scale-110 transition-transform duration-300" />
           <span className="text-lg font-bold tracking-tight">
-            <span className="text-foreground">Ch.</span>
-            <span className="gradient-text">Saifullah</span>
+            <span className="text-foreground">Ch</span>
+            <span className="gradient-text">Saifullah Sundhu</span>
           </span>
         </Link>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-1">
           {navLinks.map((item) => {
-            const id       = item.href.replace("#", "")
+            const id = item.href.replace("#", "")
             const isActive = activeSection === id
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
-                    isActive
-                      ? "text-foreground bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                  }`}
+                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${isActive
+                    ? "text-foreground bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    }`}
                 >
                   {item.label}
                   {isActive && (

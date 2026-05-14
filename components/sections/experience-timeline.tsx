@@ -10,7 +10,7 @@ const timeline = [
     iconBg: "bg-violet-500/10 border-violet-500/30",
     period: "2023 – Present",
     title: "BS Computer Science",
-    organization: "University of Gujrat",
+    organization: "Gift University",
     location: "Gujranwala, Pakistan",
     description:
       "Pursuing a Bachelor's degree in Computer Science, building a strong foundation in data structures, algorithms, databases, software engineering, and OOP principles.",
@@ -67,8 +67,8 @@ export default function ExperienceTimeline() {
 
         <div className="space-y-12">
           {timeline.map((item, i) => {
-            const Icon      = item.icon
-            const isEven    = i % 2 === 0
+            const Icon = item.icon
+            const isEven = i % 2 === 0
             return (
               <motion.div
                 key={item.title}

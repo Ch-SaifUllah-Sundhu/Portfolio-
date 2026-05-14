@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 import { useProfile } from "@/components/data/use-portfolio"
 
 export default function HeroDynamic() {
-  const { data } = useProfile()
+  const { profile: data } = useProfile()
   const name = data?.name || "Your Name"
-  const role = data?.role || "Full-Stack Developer"
-  const summary = data?.summary || "I build modern, animated, and accessible web apps."
+  const role = data?.title || "Full-Stack Developer"
+  const summary = data?.tagline || "I build modern, animated, and accessible web apps."
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-6xl px-4 py-20 md:py-28 grid gap-6">
