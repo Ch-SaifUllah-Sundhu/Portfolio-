@@ -13,13 +13,13 @@ const categories = [
     color: "from-blue-500/10 to-cyan-500/10 border-blue-500/20",
     dot: "bg-blue-400",
     skills: [
-      { name: "HTML5",       icon: <FaHtml5 className="text-orange-500" /> },
-      { name: "CSS3",        icon: <FaCss3Alt className="text-blue-500" /> },
-      { name: "JavaScript",  icon: <FaJsSquare className="text-yellow-400" /> },
-      { name: "TypeScript",  icon: <SiTypescript className="text-blue-400" /> },
-      { name: "React",       icon: <FaReact className="text-cyan-400" /> },
-      { name: "Next.js",     icon: <SiNextdotjs className="text-foreground" /> },
-      { name: "Tailwind",    icon: <SiTailwindcss className="text-cyan-400" /> },
+      { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
+      { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
+      { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
+      { name: "React", icon: <FaReact className="text-cyan-400" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="text-foreground" /> },
+      { name: "Tailwind", icon: <SiTailwindcss className="text-cyan-400" /> },
     ],
   },
   {
@@ -27,9 +27,9 @@ const categories = [
     color: "from-green-500/10 to-emerald-500/10 border-green-500/20",
     dot: "bg-green-400",
     skills: [
-      { name: "Node.js",    icon: <FaNodeJs className="text-green-500" /> },
+      { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
       { name: "Express.js", icon: <SiExpress className="text-foreground" /> },
-      { name: "PHP",        icon: <FaPhp className="text-indigo-400" /> },
+      { name: "PHP", icon: <FaPhp className="text-indigo-400" /> },
     ],
   },
   {
@@ -38,7 +38,7 @@ const categories = [
     dot: "bg-emerald-400",
     skills: [
       { name: "MongoDB", icon: <SiMongodb className="text-emerald-500" /> },
-      { name: "MySQL",   icon: <SiMysql className="text-sky-400" /> },
+      { name: "MySQL", icon: <SiMysql className="text-sky-400" /> },
     ],
   },
   {
@@ -46,18 +46,18 @@ const categories = [
     color: "from-violet-500/10 to-purple-500/10 border-violet-500/20",
     dot: "bg-violet-400",
     skills: [
-      { name: "Git",    icon: <FaGitAlt className="text-orange-500" /> },
+      { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
       { name: "GitHub", icon: <FaGithub className="text-foreground" /> },
-      { name: "npm",    icon: <FaNpm className="text-red-500" /> },
+      { name: "npm", icon: <FaNpm className="text-red-500" /> },
     ],
   },
 ]
 
 const stats = [
-  { value: "2+",  label: "Years Learning" },
-  { value: "6",   label: "Projects Built" },
+  { value: "2+", label: "Years Learning" },
+  { value: "6", label: "Projects Built" },
   { value: "10+", label: "Technologies" },
-  { value: "100%",label: "Passion" },
+  { value: "100%", label: "Passion" },
 ]
 
 const containerVariants = {
@@ -65,7 +65,7 @@ const containerVariants = {
   visible: { transition: { staggerChildren: 0.08 } },
 }
 const itemVariants = {
-  hidden:  { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 }
 
@@ -97,7 +97,7 @@ export function About() {
           <p className="text-muted-foreground leading-relaxed mb-4">
             I&apos;m <strong className="text-foreground">Ch Saifullah Sundhu</strong>, a passionate Full-Stack
             Developer from <strong className="text-violet-400">Gujranwala, Pakistan</strong>, currently pursuing
-            a BS in Computer Science at the University of Gujrat.
+            a BS in Computer Science at the <strong className="text-violet-400">Gift University, Gujranwala</strong>.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             I love turning ideas into real, functional applications — from PHP-based retail systems to

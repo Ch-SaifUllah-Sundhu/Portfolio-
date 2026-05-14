@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useProjects } from "@/components/data/use-portfolio"
 
 export default function ProjectsDynamic() {
-  const { data } = useProjects()
+
   const projects = [
     {
       title: "Animated Landing",

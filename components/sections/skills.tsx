@@ -2,7 +2,6 @@
 import { useSkills } from "@/components/data/use-portfolio"
 
 export default function SkillsSection() {
-  const { data } = useSkills()
   const skills = [
     { name: "HTML" },
     { name: "CSS" },

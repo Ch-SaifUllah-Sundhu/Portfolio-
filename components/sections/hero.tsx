@@ -9,30 +9,30 @@ import { Download, ArrowRight, Github, Linkedin, Instagram, ChevronDown } from "
 const roles = ["Full-Stack Developer", "MERN Stack Engineer", "PHP Developer", "Problem Solver"]
 
 const techBadges = [
-  { name: "HTML5",    style: "from-orange-500/20 to-orange-600/10 border-orange-500/40 text-orange-400",  delay: "animate-float" },
-  { name: "CSS3",     style: "from-blue-500/20 to-blue-600/10 border-blue-500/40 text-blue-400",          delay: "animate-float-delay-1" },
-  { name: "JS",       style: "from-yellow-400/20 to-yellow-500/10 border-yellow-400/40 text-yellow-300",  delay: "animate-float-delay-2" },
-  { name: "React",    style: "from-cyan-400/20 to-cyan-500/10 border-cyan-400/40 text-cyan-400",          delay: "animate-float-delay-3" },
-  { name: "Node.js",  style: "from-green-500/20 to-green-600/10 border-green-500/40 text-green-400",      delay: "animate-float" },
-  { name: "MongoDB",  style: "from-emerald-500/20 to-emerald-600/10 border-emerald-500/40 text-emerald-400", delay: "animate-float-delay-1" },
-  { name: "PHP",      style: "from-indigo-400/20 to-indigo-500/10 border-indigo-400/40 text-indigo-300",  delay: "animate-float-delay-2" },
-  { name: "MySQL",    style: "from-sky-400/20 to-sky-500/10 border-sky-400/40 text-sky-300",              delay: "animate-float-delay-3" },
+  { name: "HTML5", style: "from-orange-500/20 to-orange-600/10 border-orange-500/40 text-orange-400", delay: "animate-float" },
+  { name: "CSS3", style: "from-blue-500/20 to-blue-600/10 border-blue-500/40 text-blue-400", delay: "animate-float-delay-1" },
+  { name: "JS", style: "from-yellow-400/20 to-yellow-500/10 border-yellow-400/40 text-yellow-300", delay: "animate-float-delay-2" },
+  { name: "React", style: "from-cyan-400/20 to-cyan-500/10 border-cyan-400/40 text-cyan-400", delay: "animate-float-delay-3" },
+  { name: "Node.js", style: "from-green-500/20 to-green-600/10 border-green-500/40 text-green-400", delay: "animate-float" },
+  { name: "MongoDB", style: "from-emerald-500/20 to-emerald-600/10 border-emerald-500/40 text-emerald-400", delay: "animate-float-delay-1" },
+  { name: "PHP", style: "from-indigo-400/20 to-indigo-500/10 border-indigo-400/40 text-indigo-300", delay: "animate-float-delay-2" },
+  { name: "MySQL", style: "from-sky-400/20 to-sky-500/10 border-sky-400/40 text-sky-300", delay: "animate-float-delay-3" },
 ]
 
 const socials = [
-  { href: "https://github.com/Ch-SaifUllah-Sundhu",              icon: Github,    label: "GitHub",    color: "hover:text-white hover:bg-white/10" },
-  { href: "https://www.linkedin.com/in/saifullah-sundhu-708363357", icon: Linkedin,  label: "LinkedIn",  color: "hover:text-blue-400 hover:bg-blue-400/10" },
-  { href: "https://www.instagram.com/saif_sundhu",               icon: Instagram, label: "Instagram", color: "hover:text-pink-400 hover:bg-pink-400/10" },
+  { href: "https://github.com/Ch-SaifUllah-Sundhu", icon: Github, label: "GitHub", color: "hover:text-white hover:bg-white/10" },
+  { href: "https://www.linkedin.com/in/saifullah-sundhu-708363357", icon: Linkedin, label: "LinkedIn", color: "hover:text-blue-400 hover:bg-blue-400/10" },
+  { href: "https://www.instagram.com/saif_sundhu", icon: Instagram, label: "Instagram", color: "hover:text-pink-400 hover:bg-pink-400/10" },
 ]
 
 export function Hero() {
-  const [roleIndex,   setRoleIndex]   = useState(0)
+  const [roleIndex, setRoleIndex] = useState(0)
   const [displayText, setDisplayText] = useState("")
-  const [isDeleting,  setIsDeleting]  = useState(false)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
     const current = roles[roleIndex]
-    const speed   = isDeleting ? 45 : 95
+    const speed = isDeleting ? 45 : 95
 
     const timer = setTimeout(() => {
       if (!isDeleting) {
@@ -180,7 +180,7 @@ export function Hero() {
           >
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-background">
               <Image
-                src="/IMG_20240125_203937.jpg"
+                src="/Gemini_Generated_Image_r09mlrr09mlrr09m.png"
                 alt="Ch Saifullah Sundhu"
                 width={256}
                 height={256}
