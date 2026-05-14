@@ -1,94 +1,126 @@
 "use client"
 
-import { ContactForm } from "./contact/form"
 import { motion } from "framer-motion"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from "lucide-react"
+import { ContactForm } from "./contact/form"
+
+const contactInfo = [
+  { icon: Mail,    label: "Email",    value: "chsaifullah17517@gmail.com", href: "mailto:chsaifullah17517@gmail.com", color: "text-violet-400" },
+  { icon: Phone,   label: "Phone",   value: "+92 306 9727242",             href: "tel:+923069727242",                 color: "text-cyan-400"   },
+  { icon: MapPin,  label: "Location", value: "Gujranwala, Pakistan",        href: null,                                color: "text-emerald-400" },
+]
+
+const socials = [
+  { href: "https://github.com/Ch-SaifUllah-Sundhu",                icon: Github,    label: "GitHub",    bg: "hover:bg-white/10 hover:text-white"          },
+  { href: "https://www.linkedin.com/in/saifullah-sundhu-708363357", icon: Linkedin,  label: "LinkedIn",  bg: "hover:bg-blue-500/10 hover:text-blue-400"    },
+  { href: "https://www.instagram.com/saif_sundhu",                 icon: Instagram, label: "Instagram", bg: "hover:bg-pink-500/10 hover:text-pink-400"    },
+]
 
 export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative mx-auto max-w-7xl px-4 md:px-8 py-24 md:py-32 overflow-hidden"
+      className="relative mx-auto max-w-6xl px-6 py-24 md:py-32 overflow-hidden"
     >
-      {/* Aesthetic gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-100 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-950" />
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-300/30 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-300/30 rounded-full blur-3xl" />
+      {/* Background glows */}
+      <div className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-violet-600/8 blur-[120px] pointer-events-none" />
+      <div className="absolute -bottom-40 -right-40 w-80 h-80 rounded-full bg-cyan-500/8 blur-[120px] pointer-events-none" />
 
-      {/* Section heading */}
+      {/* Header */}
       <motion.div
+        className="text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative text-center mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-          Get In Touch
-        </h2>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-          Let’s collaborate and bring your ideas to life!
+        <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-3 block">Get In Touch</span>
+        <h2 className="text-3xl md:text-4xl font-extrabold gradient-text">Let&apos;s Work Together</h2>
+        <div className="mt-3 mx-auto w-16 h-1 rounded-full" style={{ background: "linear-gradient(90deg,#7c3aed,#06b6d4)" }} />
+        <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+          Whether you have a project in mind, an opportunity to discuss, or just want to say hello —
+          my inbox is always open.
         </p>
       </motion.div>
 
-      {/* Main content split layout */}
-      <div className="relative grid md:grid-cols-2 gap-12 items-center">
-        {/* Contact Info Section */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="bg-white/70 dark:bg-gray-900/60 backdrop-blur-lg rounded-2xl shadow-xl border border-gray-200/60 dark:border-gray-700/60 p-8 md:p-10"
-        >
-          <h3 className="text-2xl font-semibold mb-6 text-indigo-700 dark:text-indigo-400">
-            Contact Information
-          </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Feel free to reach out for collaborations, opportunities, or any inquiries. I’d love to hear from you.
-          </p>
+      {/* Two-column grid */}
+      <div className="grid md:grid-cols-2 gap-8 items-start">
 
-          <ul className="space-y-5 text-gray-700 dark:text-gray-300">
-            <li className="flex items-center gap-3">
-              <Mail className="text-indigo-500" size={20} />
-              <span>chsaifullah17517@gmail.com</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone className="text-purple-500" size={20} />
-              <span>+92 306 9727242</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <MapPin className="text-indigo-500" size={20} />
-              <span>Gujranwala, Pakistan</span>
-            </li>
+        {/* Left — contact info */}
+        <motion.div
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="p-8 rounded-2xl border border-border bg-card card-glow space-y-8"
+        >
+          {/* Availability badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            Available for new opportunities
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-foreground mb-2">Contact Information</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Feel free to reach out for collaborations, freelance work, or any inquiries.
+              I typically respond within 24 hours.
+            </p>
+          </div>
+
+          {/* Info list */}
+          <ul className="space-y-4">
+            {contactInfo.map(({ icon: Icon, label, value, href, color }) => (
+              <li key={label} className="flex items-center gap-4 group">
+                <div className={`w-10 h-10 rounded-xl border border-border bg-muted flex items-center justify-center shrink-0 ${color}`}>
+                  <Icon size={18} />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">{label}</p>
+                  {href ? (
+                    <a href={href} className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                      {value}
+                    </a>
+                  ) : (
+                    <p className="text-sm font-medium text-foreground">{value}</p>
+                  )}
+                </div>
+              </li>
+            ))}
           </ul>
 
-          <div className="mt-10 flex gap-4">
-            <a
-              href="https://github.com/Ch-SaifUllah-Sundhu"
-              target="_blank"
-              className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full hover:scale-110 transition-transform duration-300 shadow-lg"
-            >
-              <i className="fab fa-github"></i> GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/saifullah-sundhu-708363357"
-              target="_blank"
-              className="p-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full hover:scale-110 transition-transform duration-300 shadow-lg"
-            >
-              <i className="fab fa-linkedin"></i> LinkedIn
-            </a>
+          {/* Social links */}
+          <div>
+            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide mb-3">Find me on</p>
+            <div className="flex gap-3">
+              {socials.map(({ href, icon: Icon, label, bg }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className={`p-2.5 rounded-xl border border-border text-muted-foreground transition-all duration-200 ${bg}`}
+                >
+                  <Icon size={18} />
+                </a>
+              ))}
+            </div>
           </div>
         </motion.div>
 
-        {/* Contact Form Section */}
+        {/* Right — form */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 24 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white/70 dark:bg-gray-900/60 backdrop-blur-lg rounded-2xl shadow-xl border border-gray-200/60 dark:border-gray-700/60 p-8 md:p-10"
+          className="p-8 rounded-2xl border border-border bg-card card-glow"
         >
+          <h3 className="text-xl font-bold text-foreground mb-6">Send a Message</h3>
           <ContactForm />
         </motion.div>
+
       </div>
     </section>
   )

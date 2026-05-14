@@ -1,58 +1,164 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaReact, FaDatabase } from "react-icons/fa"
+import {
+  FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaReact, FaDatabase,
+  FaPhp, FaGitAlt, FaGithub, FaNpm,
+} from "react-icons/fa"
+import { SiMongodb, SiMysql, SiExpress, SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si"
+
+const categories = [
+  {
+    title: "Frontend",
+    color: "from-blue-500/10 to-cyan-500/10 border-blue-500/20",
+    dot: "bg-blue-400",
+    skills: [
+      { name: "HTML5",       icon: <FaHtml5 className="text-orange-500" /> },
+      { name: "CSS3",        icon: <FaCss3Alt className="text-blue-500" /> },
+      { name: "JavaScript",  icon: <FaJsSquare className="text-yellow-400" /> },
+      { name: "TypeScript",  icon: <SiTypescript className="text-blue-400" /> },
+      { name: "React",       icon: <FaReact className="text-cyan-400" /> },
+      { name: "Next.js",     icon: <SiNextdotjs className="text-foreground" /> },
+      { name: "Tailwind",    icon: <SiTailwindcss className="text-cyan-400" /> },
+    ],
+  },
+  {
+    title: "Backend",
+    color: "from-green-500/10 to-emerald-500/10 border-green-500/20",
+    dot: "bg-green-400",
+    skills: [
+      { name: "Node.js",    icon: <FaNodeJs className="text-green-500" /> },
+      { name: "Express.js", icon: <SiExpress className="text-foreground" /> },
+      { name: "PHP",        icon: <FaPhp className="text-indigo-400" /> },
+    ],
+  },
+  {
+    title: "Database",
+    color: "from-emerald-500/10 to-teal-500/10 border-emerald-500/20",
+    dot: "bg-emerald-400",
+    skills: [
+      { name: "MongoDB", icon: <SiMongodb className="text-emerald-500" /> },
+      { name: "MySQL",   icon: <SiMysql className="text-sky-400" /> },
+    ],
+  },
+  {
+    title: "Tools",
+    color: "from-violet-500/10 to-purple-500/10 border-violet-500/20",
+    dot: "bg-violet-400",
+    skills: [
+      { name: "Git",    icon: <FaGitAlt className="text-orange-500" /> },
+      { name: "GitHub", icon: <FaGithub className="text-foreground" /> },
+      { name: "npm",    icon: <FaNpm className="text-red-500" /> },
+    ],
+  },
+]
+
+const stats = [
+  { value: "2+",  label: "Years Learning" },
+  { value: "6",   label: "Projects Built" },
+  { value: "10+", label: "Technologies" },
+  { value: "100%",label: "Passion" },
+]
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+}
+const itemVariants = {
+  hidden:  { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+}
 
 export function About() {
-  const skills = [
-    { name: "HTML", icon: <FaHtml5 className="text-orange-500" />, level: 95, color: "from-orange-500/10 to-orange-500/30" },
-    { name: "CSS", icon: <FaCss3Alt className="text-blue-500" />, level: 90, color: "from-blue-500/10 to-blue-500/30" },
-    { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400" />, level: 80, color: "from-yellow-400/10 to-yellow-400/30" },
-    { name: "Node.js", icon: <FaNodeJs className="text-green-500" />, level: 85, color: "from-green-500/10 to-green-500/30" },
-    { name: "React / Next.js", icon: <FaReact className="text-cyan-400" />, level: 50, color: "from-cyan-400/10 to-cyan-400/30" },
-    { name: "MongoDB", icon: <FaDatabase className="text-emerald-500" />, level: 80, color: "from-emerald-500/10 to-emerald-500/30" },
-  ]
-
   return (
-    <section id="skills" className="mx-auto max-w-6xl px-4 md:px-6 py-20 md:py-28">
-      <motion.h2
-        className="text-center text-3xl md:text-4xl font-bold mb-12"
-        initial={{ opacity: 0, y: 12 }}
+    <section id="about" className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
+      {/* Section header */}
+      <motion.div
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        My Skills
-      </motion.h2>
+        <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-3 block">About Me</span>
+        <h2 className="text-3xl md:text-4xl font-extrabold gradient-text">Skills & Expertise</h2>
+        <div className="mt-3 mx-auto w-16 h-1 rounded-full" style={{ background: "linear-gradient(90deg,#7c3aed,#06b6d4)" }} />
+      </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {skills.map((skill, i) => (
+      {/* Bio + stats */}
+      <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className="text-xl font-bold mb-4 text-foreground">Who I Am</h3>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            I&apos;m <strong className="text-foreground">Ch Saifullah Sundhu</strong>, a passionate Full-Stack
+            Developer from <strong className="text-violet-400">Gujranwala, Pakistan</strong>, currently pursuing
+            a BS in Computer Science at the University of Gujrat.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            I love turning ideas into real, functional applications — from PHP-based retail systems to
+            full MERN stack web apps. I believe in writing clean, efficient code and continuously levelling
+            up my skills through real-world projects.
+          </p>
+        </motion.div>
+
+        {/* Stats grid */}
+        <motion.div
+          className="grid grid-cols-2 gap-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {stats.map((s) => (
+            <motion.div
+              key={s.label}
+              variants={itemVariants}
+              className="p-5 rounded-2xl border border-border bg-card card-glow text-center"
+            >
+              <div className="text-3xl font-extrabold gradient-text">{s.value}</div>
+              <div className="text-sm text-muted-foreground mt-1 font-medium">{s.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Tech stack categories */}
+      <motion.div
+        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {categories.map((cat) => (
           <motion.div
-            key={skill.name}
-            className={`p-5 rounded-xl bg-gradient-to-br ${skill.color} border border-border backdrop-blur-sm shadow-md hover:shadow-lg transition`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
+            key={cat.title}
+            variants={itemVariants}
+            className={`p-5 rounded-2xl border bg-gradient-to-br ${cat.color} card-glow transition-all duration-300`}
           >
-            <div className="flex items-center gap-3 mb-3">
-              <div className="text-3xl">{skill.icon}</div>
-              <h3 className="text-lg font-semibold">{skill.name}</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <span className={`w-2.5 h-2.5 rounded-full ${cat.dot}`} />
+              <h4 className="font-semibold text-sm tracking-wide uppercase text-muted-foreground">{cat.title}</h4>
             </div>
-
-            <div className="w-full bg-border/40 rounded-full h-3 overflow-hidden">
-              <motion.div
-                className="h-full bg-gradient-to-r from-primary to-accent"
-                style={{ width: `${skill.level}%` }}
-                initial={{ width: 0 }}
-                whileInView={{ width: `${skill.level}%` }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              />
+            <div className="flex flex-wrap gap-2">
+              {cat.skills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-background/60 border border-border/50 text-xs font-medium text-foreground backdrop-blur-sm hover:border-primary/40 transition-colors"
+                >
+                  <span className="text-base">{skill.icon}</span>
+                  {skill.name}
+                </div>
+              ))}
             </div>
-            <p className="mt-1 text-sm text-muted-foreground">{skill.level}% proficiency</p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }
