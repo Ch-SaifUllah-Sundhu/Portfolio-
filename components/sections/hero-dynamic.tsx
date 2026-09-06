@@ -44,7 +44,7 @@ export default function HeroDynamic() {
           <a href="#projects" className="px-4 py-2 rounded-md bg-brand text-brand-foreground">
             View Projects
           </a>
-          <a href="/cv" className="px-4 py-2 rounded-md border">
+          <a href="/cv/Ch%20Saifullah%20Sundhu.pdf" download="Ch Saifullah Sundhu.pdf" className="px-4 py-2 rounded-md border">
             Download CV
           </a>
         </motion.div>

@@ -31,16 +31,16 @@ export default function MainNav() {
               <Item href="#testimonials" label="Testimonials" />
               <Item href="#blog" label="Blog" />
               <Item href="#contact" label="Contact" />
-              <Link className="px-3 py-1.5 rounded-md bg-brand text-brand-foreground" href="/cv">
+              <a className="px-3 py-1.5 rounded-md bg-brand text-brand-foreground" href="/cv/Ch%20Saifullah%20Sundhu.pdf" target="_blank" rel="noopener noreferrer">
                 CV
-              </Link>
+              </a>
             </>
           ) : (
             <>
               <Link href="/portfolio">Portfolio</Link>
-              <Link className="px-3 py-1.5 rounded-md bg-brand text-brand-foreground" href="/cv">
+              <a className="px-3 py-1.5 rounded-md bg-brand text-brand-foreground" href="/cv/Ch%20Saifullah%20Sundhu.pdf" target="_blank" rel="noopener noreferrer">
                 CV
-              </Link>
+              </a>
             </>
           )}
         </nav>
@@ -56,7 +56,7 @@ export default function MainNav() {
         <div className="md:hidden border-t border-border">
           <div className="mx-auto max-w-6xl px-4 py-3 grid gap-3">
             <Link href="/portfolio">Portfolio</Link>
-            <Link href="/cv">CV</Link>
+            <a href="/cv/Ch%20Saifullah%20Sundhu.pdf" target="_blank" rel="noopener noreferrer">CV</a>
           </div>
         </div>
       )}

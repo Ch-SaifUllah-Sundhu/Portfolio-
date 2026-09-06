@@ -126,8 +126,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <a
-              href="/cv/cv.pdf"
-              download="Saifullah_Sundhu_CV.pdf"
+              href="/cv/Ch%20Saifullah%20Sundhu.pdf"
+              download="Ch Saifullah Sundhu.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:scale-105 transition-all duration-300"
               style={{ background: "linear-gradient(135deg, #7c3aed, #06b6d4)" }}
             >
